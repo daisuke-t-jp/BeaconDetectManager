@@ -35,10 +35,56 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 	
 	func bluetoothManagerDidDisableLocation(_ manager: BluetoothManager) {
 		print("bluetoothManagerDidDisableLocation")
+		
+		let alert: UIAlertController = UIAlertController(title: "Demo",
+														 message: "Please enable Location service",
+														 preferredStyle: .alert)
+		
+		let defaultAction: UIAlertAction = UIAlertAction(title: "OK",
+														 style: .default,
+														 handler:
+			{
+				(action: UIAlertAction!) -> Void in
+				UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+		})
+		
+		let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel",
+														style: .cancel,
+														handler:
+			{
+				(action: UIAlertAction!) -> Void in
+		})
+		
+		alert.addAction(cancelAction)
+		alert.addAction(defaultAction)
+		
+		present(alert, animated: true, completion: nil)
 	}
 	
 	func bluetoothManagerDidDisableBluetooth(_ manager: BluetoothManager) {
-		print("bluetoothManagerDidDisableBluetooth")
+		let alert: UIAlertController = UIAlertController(title: "Demo",
+														 message: "Please enable Bluetooth service",
+														 preferredStyle: .alert)
+		
+		let defaultAction: UIAlertAction = UIAlertAction(title: "OK",
+														 style: .default,
+														 handler:
+			{
+				(action: UIAlertAction!) -> Void in
+				UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+		})
+		
+		let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel",
+														style: .cancel,
+														handler:
+			{
+				(action: UIAlertAction!) -> Void in
+		})
+		
+		alert.addAction(cancelAction)
+		alert.addAction(defaultAction)
+		
+		present(alert, animated: true, completion: nil)
 	}
 	
 }
