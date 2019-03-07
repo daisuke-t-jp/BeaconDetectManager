@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "BluetoothManager/*.{swift}"
+  spec.source_files  = "BluetoothManager/BluetoothManager/*.{swift}"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
