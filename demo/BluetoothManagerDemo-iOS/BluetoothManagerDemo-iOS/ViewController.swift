@@ -19,19 +19,6 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 		BluetoothManager.sharedManager.delegate = self
 		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID")
 	}
-
-
-	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion) {
-		print("didEnterRegion \(region)")
-	}
-	
-	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion) {
-		print("didExitRegion \(region)")
-	}
-	
-	func bluetoothManager(_ manager: BluetoothManager, didRangeBeacons beacons: [CLBeacon]) {
-		print("didRangeBeacons \(beacons)")
-	}
 	
 	func bluetoothManagerDidDisableLocation(_ manager: BluetoothManager) {
 		print("bluetoothManagerDidDisableLocation")

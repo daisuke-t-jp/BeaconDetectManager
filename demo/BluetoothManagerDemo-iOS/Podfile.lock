@@ -1,5 +1,5 @@
 PODS:
-  - BluetoothManager (1.0.1)
+  - BluetoothManager (1.0.2)
 
 DEPENDENCIES:
   - BluetoothManager (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  BluetoothManager: 1f3ccb02fa23de87d3b2171d8c14af777d525dfd
+  BluetoothManager: 5f93498c53fd40299a8a2b10ed3665aba8269033
 
 PODFILE CHECKSUM: a6bf7b0b98cd7387be404ef10cce1f48beaec07f
 

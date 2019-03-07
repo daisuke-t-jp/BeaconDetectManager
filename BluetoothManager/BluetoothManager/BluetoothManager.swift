@@ -16,7 +16,11 @@ import CoreBluetooth
 // TODO: unittest
 // TODO: demo
 // TODO: travis
+// TODO: set swiftlint
 
+
+
+// MARK: - BluetoothManagerDelegate
 public protocol BluetoothManagerDelegate : class {
 	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion)
 	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion)
@@ -25,6 +29,24 @@ public protocol BluetoothManagerDelegate : class {
 	func bluetoothManagerDidDisableBluetooth(_ manager: BluetoothManager)
 }
 
+// MARK: - BluetoothManagerDelegate(Optional)
+public extension BluetoothManagerDelegate {
+	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion) {
+		// Empty implementation to be "optional"
+	}
+
+	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion) {
+		// Empty implementation to be "optional"
+	}
+
+	func bluetoothManager(_ manager: BluetoothManager, didRangeBeacons beacons: [CLBeacon]) {
+		// Empty implementation to be "optional"
+	}
+}
+
+
+
+// MARK: - BluetoothManager
 public class BluetoothManager: NSObject,
 CLLocationManagerDelegate,
 CBCentralManagerDelegate {
@@ -48,7 +70,7 @@ CBCentralManagerDelegate {
 	private var centralManager: CBCentralManager = CBCentralManager()
 	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
 	private var locationManager: CLLocationManager = CLLocationManager()
-	public weak var delegate: BluetoothManagerDelegate?
+	weak public var delegate: BluetoothManagerDelegate?
 	public private(set) var state = State.initialized
 	public private(set) var proximityUUID: String = ""
 	public private(set) var majorMinorArray: [MajorMinor] = [MajorMinor]()
