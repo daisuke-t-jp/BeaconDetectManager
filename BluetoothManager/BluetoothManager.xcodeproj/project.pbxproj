@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0263627F2230DE7A008796BB /* MajorMinor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263627E2230DE7A008796BB /* MajorMinor.swift */; };
 		7ED93959222FF46200D35C09 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9394F222FF46200D35C09 /* BluetoothManager.framework */; };
 		7ED9395E222FF46200D35C09 /* BluetoothManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9395D222FF46200D35C09 /* BluetoothManagerTests.swift */; };
 		7ED93960222FF46200D35C09 /* BluetoothManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ED93952222FF46200D35C09 /* BluetoothManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0263627E2230DE7A008796BB /* MajorMinor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorMinor.swift; sourceTree = "<group>"; };
 		7ED9394F222FF46200D35C09 /* BluetoothManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluetoothManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED93952222FF46200D35C09 /* BluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
 		7ED93953222FF46200D35C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			children = (
 				7ED93953222FF46200D35C09 /* Info.plist */,
 				7ED93952222FF46200D35C09 /* BluetoothManager.h */,
-				0263627E2230DE7A008796BB /* MajorMinor.swift */,
 				7ED93969222FF63D00D35C09 /* BluetoothManager.swift */,
 			);
 			path = BluetoothManager;
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED9396A222FF63D00D35C09 /* BluetoothManager.swift in Sources */,
-				0263627F2230DE7A008796BB /* MajorMinor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

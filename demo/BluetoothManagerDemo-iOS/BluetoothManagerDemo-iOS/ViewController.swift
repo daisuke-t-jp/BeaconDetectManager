@@ -17,7 +17,27 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 		super.viewDidLoad()
 		
 		BluetoothManager.sharedManager.delegate = self
-		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID")
+
+		// Start ranging with a proximityUUID. major and minor values will be wildcarded.
+		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
+
+		// Start ranging with a proximityUUID and major value. minor value will be wildcarded.
+//		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+//											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
+//											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd)])
+		
+		// Start ranging with a proximityUUID and major/minor values.
+//		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+//											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
+//											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0001),
+//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0010),
+//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0100),
+//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x1000),
+//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0001),
+//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0010),
+//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0100),
+//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
 	}
 	
 	func bluetoothManagerDidDisableLocation(_ manager: BluetoothManager) {

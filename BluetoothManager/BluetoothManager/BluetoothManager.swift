@@ -10,15 +10,6 @@ import Foundation
 import CoreLocation
 import CoreBluetooth
 
-// TODO: refactoring
-// TODO: readme
-// TODO: podspec
-// TODO: unittest
-// TODO: demo
-// TODO: travis
-
-
-
 // MARK: - BluetoothManagerDelegate
 public protocol BluetoothManagerDelegate: class {
 	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion)
@@ -52,16 +43,48 @@ CBCentralManagerDelegate {
 	
 	// MARK: - Enum, Const
 	public enum State {
-		case initialized
+		case none
 		case requestAuthorization
 		case scanRunning
-		case scanStop
 	}
 	
-	private enum RangingMode {
+	public struct MajorMinor {
+		public var major: CLBeaconMajorValue
+		public var minor: CLBeaconMinorValue?
+		
+		public init(major: CLBeaconMajorValue) {
+			self.major = major
+		}
+		
+		public init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
+			self.major = major
+			self.minor = minor
+		}
+	}
+	
+	public enum RangingTarget {
 		case proximityUUID
 		case proximityUUIDAndMajor
 		case proximityUUIDAndMajorMinor
+	}
+	
+	public struct RangingOption: OptionSet {
+		
+		// MARK: - Enum, Const
+		public static let didEnterRegion = RangingOption(rawValue: 1 << 0)
+		public static let didExitRegion = RangingOption(rawValue: 1 << 1)
+		public static let didRangeBeacons = RangingOption(rawValue: 1 << 2)
+		
+		
+		// MARK: - Property
+		public let rawValue: Int
+		
+		
+		// MARK: - Initializer
+		public init(rawValue: Int) {
+			self.rawValue = rawValue
+		}
+		
 	}
 	
 	
@@ -70,11 +93,11 @@ CBCentralManagerDelegate {
 	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
 	private var locationManager: CLLocationManager = CLLocationManager()
 	weak public var delegate: BluetoothManagerDelegate?
-	public private(set) var state = State.initialized
+	public private(set) var state: State = .none
 	public private(set) var proximityUUID: String = ""
 	public private(set) var majorMinorArray: [MajorMinor] = [MajorMinor]()
-	private var rangingMode: RangingMode = .proximityUUID
-	
+	public private(set) var rangingTarget: RangingTarget = .proximityUUID
+	public private(set) var rangingOption: RangingOption = []
 	
 	// MARK: - Singleton
 	public static let sharedManager = BluetoothManager()
@@ -88,13 +111,18 @@ CBCentralManagerDelegate {
 // MARK: - Operation
 extension BluetoothManager {
 	
-	public func start(_ proximityUUID: String, majorMinorArray: [MajorMinor] = [MajorMinor]()) {
+	public func start(_ proximityUUID: String, rangingOption: RangingOption, majorMinorArray: [MajorMinor] = [MajorMinor]()) {
 		guard proximityUUID.count > 0 else {
 			return
 		}
-
+		
+		guard state == .none else {
+			return
+		}
+		
 		self.proximityUUID = proximityUUID
 		self.majorMinorArray = majorMinorArray
+		self.rangingOption = rangingOption
 		
 		state = State.requestAuthorization
 		
@@ -130,23 +158,30 @@ extension BluetoothManager {
 			let majorMinor = majorMinorArray[0]
 			if let minor = majorMinor.minor {
 				// Ranging with a proximityUUID and major/minor values.
-				rangingMode = .proximityUUIDAndMajorMinor
+				rangingTarget = .proximityUUIDAndMajorMinor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, minor: minor, identifier: beaconID)
 			} else {
 				// Ranging with a proximityUUID and major value. minor value will be wildcarded.
-				rangingMode = .proximityUUIDAndMajor
+				rangingTarget = .proximityUUIDAndMajor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, identifier: beaconID)
 			}
 		} else {
 			// Ranging with a proximityUUID. major and minor values will be wildcarded.
-			rangingMode = .proximityUUID
+			rangingTarget = .proximityUUID
 			beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: beaconID)
 		}
 		
 		
 		beaconRegion.notifyEntryStateOnDisplay = false
-		beaconRegion.notifyOnEntry = true
-		beaconRegion.notifyOnExit = true
+		beaconRegion.notifyOnEntry = false
+		beaconRegion.notifyOnExit = false
+
+		if rangingOption.contains(.didEnterRegion) {
+			beaconRegion.notifyOnEntry = false
+		}
+		if rangingOption.contains(.didExitRegion) {
+			beaconRegion.notifyOnExit = false
+		}
 		
 		locationManager = CLLocationManager()
 		locationManager.delegate = self
@@ -160,7 +195,7 @@ extension BluetoothManager {
 	}
 	
 	public func stop() {
-		state = .scanStop
+		state = .none
 		
 		centralManager.delegate = nil
 		
@@ -196,15 +231,11 @@ extension BluetoothManager {
 // MARK: - LocationManager(Delegate)
 extension BluetoothManager {
 	
-	private func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-		guard let delegate = delegate else {
+	private func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+		guard rangingOption.contains(.didEnterRegion) else {
 			return
 		}
 		
-		delegate.bluetoothManager(self, didRangeBeacons: beacons)
-	}
-	
-	private func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		guard let delegate = delegate else {
 			return
 		}
@@ -213,11 +244,27 @@ extension BluetoothManager {
 	}
 	
 	private func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+		guard rangingOption.contains(.didExitRegion) else {
+			return
+		}
+		
 		guard let delegate = delegate else {
 			return
 		}
 		
 		delegate.bluetoothManager(self, didExitRegion: region)
+	}
+	
+	private func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+		guard rangingOption.contains(.didRangeBeacons) else {
+			return
+		}
+		
+		guard let delegate = delegate else {
+			return
+		}
+		
+		delegate.bluetoothManager(self, didRangeBeacons: beacons)
 	}
 	
 }
