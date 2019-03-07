@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode10
+
+env:
+  global:
+
+before_install:
+
+script:
+  - swift --version
+  - xcodebuild test -project "BluetoothManager/BluetoothManager.xcodeproj" -scheme "BluetoothManager" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
+
+branches:
+  only: 
+      - master
