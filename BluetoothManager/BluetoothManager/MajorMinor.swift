@@ -11,5 +11,5 @@ import CoreLocation
 
 public struct MajorMinor {
 	var major: CLBeaconMajorValue
-	var minor: CLBeaconMinorValue? = nil
+	var minor: CLBeaconMinorValue?
 }

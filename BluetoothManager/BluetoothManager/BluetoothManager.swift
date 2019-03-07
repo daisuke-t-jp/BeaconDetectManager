@@ -16,12 +16,11 @@ import CoreBluetooth
 // TODO: unittest
 // TODO: demo
 // TODO: travis
-// TODO: set swiftlint
 
 
 
 // MARK: - BluetoothManagerDelegate
-public protocol BluetoothManagerDelegate : class {
+public protocol BluetoothManagerDelegate: class {
 	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion)
 	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion)
 	func bluetoothManager(_ manager: BluetoothManager, didRangeBeacons beacons: [CLBeacon])
@@ -133,14 +132,12 @@ extension BluetoothManager {
 				// Ranging with a proximityUUID and major/minor values.
 				rangingMode = .proximityUUIDAndMajorMinor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, minor: minor, identifier: beaconID)
-			}
-			else {
+			} else {
 				// Ranging with a proximityUUID and major value. minor value will be wildcarded.
 				rangingMode = .proximityUUIDAndMajor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, identifier: beaconID)
 			}
-		}
-		else {
+		} else {
 			// Ranging with a proximityUUID. major and minor values will be wildcarded.
 			rangingMode = .proximityUUID
 			beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: beaconID)
@@ -233,8 +230,7 @@ extension BluetoothManager {
 	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		let cbstate = central.state
 		
-		switch (cbstate)
-		{
+		switch cbstate {
 		case .poweredOff:
 			guard let delegate = delegate else {
 				break
@@ -242,14 +238,12 @@ extension BluetoothManager {
 			
 			delegate.bluetoothManagerDidDisableBluetooth(self)
 			stop()
-			break;
 			
 		case .poweredOn:
 			startRanging()
-			break;
 			
 		default:
-			break;
+			break
 		}
 	}
 	
