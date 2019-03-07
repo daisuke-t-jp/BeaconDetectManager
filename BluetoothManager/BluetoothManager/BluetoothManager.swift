@@ -15,6 +15,7 @@ import CoreBluetooth
 // TODO: podspec
 // TODO: unittest
 // TODO: demo
+// TODO: travis
 
 public protocol BluetoothManagerDelegate : class {
 	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion)
@@ -36,7 +37,7 @@ CBCentralManagerDelegate {
 		case scanStop
 	}
 	
-	public enum RangingMode {
+	private enum RangingMode {
 		case proximityUUID
 		case proximityUUIDAndMajor
 		case proximityUUIDAndMajorMinor
@@ -78,7 +79,7 @@ extension BluetoothManager {
 		
 		
 		// Check location auth status.
-		guard locationManagerAuthStatusWhenInUseOrAlways() else {
+		guard BluetoothManager.locationManagerAuthStatusWhenInUseOrAlways() else {
 			guard let delegate = delegate else {
 				return
 			}
@@ -155,7 +156,7 @@ extension BluetoothManager {
 // MARK: - LocationManager
 extension BluetoothManager {
 	
-	private func locationManagerAuthStatusWhenInUseOrAlways() -> Bool {
+	static private func locationManagerAuthStatusWhenInUseOrAlways() -> Bool {
 		let status = CLLocationManager.authorizationStatus()
 		
 		if status == .authorizedWhenInUse {
@@ -176,7 +177,7 @@ extension BluetoothManager {
 // MARK: - LocationManager(Delegate)
 extension BluetoothManager {
 	
-	public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+	private func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
 		guard let delegate = delegate else {
 			return
 		}
@@ -184,7 +185,7 @@ extension BluetoothManager {
 		delegate.bluetoothManager(self, didRangeBeacons: beacons)
 	}
 	
-	public func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+	private func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		guard let delegate = delegate else {
 			return
 		}
@@ -192,7 +193,7 @@ extension BluetoothManager {
 		delegate.bluetoothManager(self, didEnterRegion: region)
 	}
 	
-	public func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+	private func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
 		guard let delegate = delegate else {
 			return
 		}
