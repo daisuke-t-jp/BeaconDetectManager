@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D66BE92231E76800BFB8B8 /* RangingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BE82231E76800BFB8B8 /* RangingOption.swift */; };
+		02D66BE92231E76800BFB8B8 /* EventOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BE82231E76800BFB8B8 /* EventOption.swift */; };
 		02D66BED2231E8A600BFB8B8 /* DetectTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */; };
 		02D66BEF2231E95300BFB8B8 /* MajorMinor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */; };
 		02D66BF12231EB5800BFB8B8 /* BluetoothManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */; };
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D66BE82231E76800BFB8B8 /* RangingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangingOption.swift; sourceTree = "<group>"; };
+		02D66BE82231E76800BFB8B8 /* EventOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOption.swift; sourceTree = "<group>"; };
 		02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectTarget.swift; sourceTree = "<group>"; };
 		02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorMinor.swift; sourceTree = "<group>"; };
 		02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				7ED93953222FF46200D35C09 /* Info.plist */,
 				7ED93952222FF46200D35C09 /* BluetoothManager.h */,
 				02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */,
-				02D66BE82231E76800BFB8B8 /* RangingOption.swift */,
+				02D66BE82231E76800BFB8B8 /* EventOption.swift */,
 				02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */,
 				02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */,
 				7ED93969222FF63D00D35C09 /* BluetoothManager.swift */,
@@ -234,7 +234,7 @@
 				02D66BED2231E8A600BFB8B8 /* DetectTarget.swift in Sources */,
 				02D66BEF2231E95300BFB8B8 /* MajorMinor.swift in Sources */,
 				7ED9396A222FF63D00D35C09 /* BluetoothManager.swift in Sources */,
-				02D66BE92231E76800BFB8B8 /* RangingOption.swift in Sources */,
+				02D66BE92231E76800BFB8B8 /* EventOption.swift in Sources */,
 				02D66BF12231EB5800BFB8B8 /* BluetoothManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

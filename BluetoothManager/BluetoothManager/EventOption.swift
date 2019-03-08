@@ -1,5 +1,5 @@
 //
-//  RangingOption.swift
+//  EventOption.swift
 //  BluetoothManager
 //
 //  Created by Daisuke T on 2019/03/08.
@@ -10,17 +10,17 @@ import Foundation
 
 extension BluetoothManager {
 	
-	/// Raning option
-	public struct RangingOption: OptionSet {
+	/// Event option
+	public struct EventOption: OptionSet {
 		
 		/// User entered the specified region.
-		public static let didEnterRegion = RangingOption(rawValue: 1 << 0)
+		public static let didEnterRegion = EventOption(rawValue: 1 << 0)
 		
 		/// User left the specified region.
-		public static let didExitRegion = RangingOption(rawValue: 1 << 1)
+		public static let didExitRegion = EventOption(rawValue: 1 << 1)
 		
 		/// One or more beacons are in range.
-		public static let didRangeBeacons = RangingOption(rawValue: 1 << 2)
+		public static let didRangeBeacons = EventOption(rawValue: 1 << 2)
 		
 		
 		/// raw value
