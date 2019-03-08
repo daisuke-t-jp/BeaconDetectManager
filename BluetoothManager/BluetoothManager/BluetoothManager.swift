@@ -13,9 +13,7 @@ import CoreBluetooth
 
 
 // MARK: - BluetoothManager
-public class BluetoothManager: NSObject,
-CLLocationManagerDelegate,
-CBCentralManagerDelegate {
+public class BluetoothManager: NSObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
 	
 	// MARK: - Enum, Const
 	public enum State {
@@ -29,14 +27,28 @@ CBCentralManagerDelegate {
 	private var centralManager: CBCentralManager = CBCentralManager()
 	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
 	private var locationManager: CLLocationManager = CLLocationManager()
+	
+	// A delegate of BluetoothManager.
 	weak public var delegate: BluetoothManagerDelegate?
+	
+	/// Current state
 	public private(set) var state: State = .none
+	
+	/// A target's ProximityUUID
 	public private(set) var proximityUUID: String = ""
+	
+	/// An array of target's major/minor.
 	public private(set) var majorMinorArray: [MajorMinor] = [MajorMinor]()
+	
+	// Detect target type.
 	public private(set) var detectTarget: DetectTarget = .proximityUUID
+	
+	// Allowed event.
 	public private(set) var eventOption: EventOption = []
 	
+	
 	// MARK: - Singleton
+	/// Singleton shared instance.
 	public static let sharedManager = BluetoothManager()
 	private override init() {
 	}
@@ -48,6 +60,12 @@ CBCentralManagerDelegate {
 // MARK: - Operation
 extension BluetoothManager {
 	
+	/// Start detecting beacon.
+	///
+	/// - Parameters:
+	///   - proximityUUID: A target's ProximityUUID.
+	///   - eventOption: Allowed event.
+	///   - majorMinorArray: An array of target's major/minor. Default is empty array.
 	public func start(_ proximityUUID: String, eventOption: EventOption, majorMinorArray: [MajorMinor] = [MajorMinor]()) {
 		guard proximityUUID.count > 0 else {
 			return
@@ -131,6 +149,7 @@ extension BluetoothManager {
 		locationManager.startRangingBeacons(in: beaconRegion)
 	}
 	
+	/// Stop detecting beacon.
 	public func stop() {
 		state = .none
 		

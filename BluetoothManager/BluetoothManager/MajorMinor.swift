@@ -11,27 +11,27 @@ import CoreLocation
 
 extension BluetoothManager {
 	
-	/// Bluetooth device's major and minor values.
+	/// Beacon major and minor values.
 	public struct MajorMinor {
 		
-		/// Device's major value.
+		/// The beacon major value.
 		public var major: CLBeaconMajorValue
 		
-		/// Device's minor value.
+		/// The beacon minor value.
 		public var minor: CLBeaconMinorValue?
 		
 		
 		/// init
 		///
-		/// - Parameter major: a Value of device's major.
+		/// - Parameter major: a Value of beacon's major.
 		public init(major: CLBeaconMajorValue) {
 			self.major = major
 		}
 		
 		/// init
 		///
-		/// - Parameter major: a Value of device's major.
-		/// - Parameter minor: a Value of device's minor.
+		/// - Parameter major: a Value of beacon's major.
+		/// - Parameter minor: a Value of beacon's minor.
 		public init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
 			self.major = major
 			self.minor = minor
