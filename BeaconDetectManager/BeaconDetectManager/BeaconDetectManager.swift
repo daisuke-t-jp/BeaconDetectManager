@@ -10,9 +10,7 @@ import Foundation
 import CoreLocation
 import CoreBluetooth
 
-
-
-// MARK: - BeaconDetectManager
+/// Beacon detect manager class
 public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
 	
 	// MARK: - Enum, Const
