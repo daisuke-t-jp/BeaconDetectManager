@@ -1,15 +1,15 @@
 //
 //  MajorMinor.swift
-//  BluetoothManager
+//  BeaconDetectManager
 //
 //  Created by Daisuke T on 2019/03/08.
-//  Copyright © 2019 BluetoothManager. All rights reserved.
+//  Copyright © 2019 BeaconDetectManager. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
 
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	/// Beacon major and minor values.
 	public struct MajorMinor {

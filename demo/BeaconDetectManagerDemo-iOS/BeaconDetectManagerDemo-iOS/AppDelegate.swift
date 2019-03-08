@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  BluetoothManagerDemo-iOS
+//  BeaconDetectManagerDemo-iOS
 //
 //  Created by Daisuke T on 2019/03/07.
-//  Copyright © 2019 BluetoothManagerDemo-iOS. All rights reserved.
+//  Copyright © 2019 BeaconDetectManagerDemo-iOS. All rights reserved.
 //
 
 import UIKit

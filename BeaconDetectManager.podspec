@@ -1,16 +1,16 @@
 Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.name         = "BluetoothManager"
+  spec.name         = "BeaconDetectManager"
   spec.version      = "1.0.2"
-  spec.summary      = "Bluetooth framework in Swift."
+  spec.summary      = "iBeacon detect manager framework in Swift."
 
   spec.description  = <<-DESC
-                   Bluetooth framework in Swift.
+                   iBeacon detect manager framework in Swift.
                    DESC
 
-  spec.homepage     = "https://github.com/daisuke-t-jp/BluetoothManager"
-  # spec.screenshots  = "https://raw.githubusercontent.com/daisuke-t-jp/BluetoothManager/master/images/header.png"
+  spec.homepage     = "https://github.com/daisuke-t-jp/BeaconDetectManager"
+  # spec.screenshots  = "https://raw.githubusercontent.com/daisuke-t-jp/BeaconDetectManager/master/images/header.png"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -26,11 +26,11 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source       = { :git => "https://github.com/daisuke-t-jp/BluetoothManager.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/daisuke-t-jp/BeaconDetectManager.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "BluetoothManager/BluetoothManager/*.{swift}"
+  spec.source_files  = "BeaconDetectManager/BeaconDetectManager/*.{swift}"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

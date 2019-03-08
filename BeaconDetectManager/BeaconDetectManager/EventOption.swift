@@ -1,14 +1,14 @@
 //
 //  EventOption.swift
-//  BluetoothManager
+//  BeaconDetectManager
 //
 //  Created by Daisuke T on 2019/03/08.
-//  Copyright © 2019 BluetoothManager. All rights reserved.
+//  Copyright © 2019 BeaconDetectManager. All rights reserved.
 //
 
 import Foundation
 
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	/// Event option
 	public struct EventOption: OptionSet {

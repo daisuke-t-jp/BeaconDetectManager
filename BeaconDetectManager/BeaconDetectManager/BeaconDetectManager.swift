@@ -1,9 +1,9 @@
 //
-//  BluetoothManager.swift
-//  BluetoothManager
+//  BeaconDetectManager.swift
+//  BeaconDetectManager
 //
 //  Created by Daisuke T on 2019/03/06.
-//  Copyright © 2019 BluetoothManager. All rights reserved.
+//  Copyright © 2019 BeaconDetectManager. All rights reserved.
 //
 
 import Foundation
@@ -12,8 +12,8 @@ import CoreBluetooth
 
 
 
-// MARK: - BluetoothManager
-public class BluetoothManager: NSObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
+// MARK: - BeaconDetectManager
+public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
 	
 	// MARK: - Enum, Const
 	public enum State {
@@ -28,8 +28,8 @@ public class BluetoothManager: NSObject, CLLocationManagerDelegate, CBCentralMan
 	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
 	private var locationManager: CLLocationManager = CLLocationManager()
 	
-	// A delegate of BluetoothManager.
-	weak public var delegate: BluetoothManagerDelegate?
+	// A delegate of BeaconDetectManager.
+	weak public var delegate: BeaconDetectManagerDelegate?
 	
 	/// Current state
 	public private(set) var state: State = .none
@@ -49,7 +49,7 @@ public class BluetoothManager: NSObject, CLLocationManagerDelegate, CBCentralMan
 	
 	// MARK: - Singleton
 	/// Singleton shared instance.
-	public static let sharedManager = BluetoothManager()
+	public static let sharedManager = BeaconDetectManager()
 	private override init() {
 	}
 	
@@ -58,7 +58,7 @@ public class BluetoothManager: NSObject, CLLocationManagerDelegate, CBCentralMan
 
 
 // MARK: - Operation
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	/// Start detecting beacon.
 	///
@@ -83,12 +83,12 @@ extension BluetoothManager {
 		
 		
 		// Check location auth status.
-		guard BluetoothManager.locationManagerAuthStatusWhenInUseOrAlways() else {
+		guard BeaconDetectManager.locationManagerAuthStatusWhenInUseOrAlways() else {
 			guard let delegate = delegate else {
 				return
 			}
 			
-			delegate.bluetoothManagerDidDisableLocationService(self)
+			delegate.beaconDetectManagerDidDisableLocationService(self)
 			
 			return
 		}
@@ -164,7 +164,7 @@ extension BluetoothManager {
 
 
 // MARK: - LocationManager
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	static private func locationManagerAuthStatusWhenInUseOrAlways() -> Bool {
 		let status = CLLocationManager.authorizationStatus()
@@ -185,7 +185,7 @@ extension BluetoothManager {
 
 
 // MARK: - LocationManager(Delegate)
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	private func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		guard eventOption.contains(.didEnterRegion) else {
@@ -196,7 +196,7 @@ extension BluetoothManager {
 			return
 		}
 		
-		delegate.bluetoothManager(self, didEnterRegion: region)
+		delegate.beaconDetectManager(self, didEnterRegion: region)
 	}
 	
 	private func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
@@ -208,7 +208,7 @@ extension BluetoothManager {
 			return
 		}
 		
-		delegate.bluetoothManager(self, didExitRegion: region)
+		delegate.beaconDetectManager(self, didExitRegion: region)
 	}
 	
 	private func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
@@ -220,7 +220,7 @@ extension BluetoothManager {
 			return
 		}
 		
-		delegate.bluetoothManager(self, didRangeBeacons: beacons)
+		delegate.beaconDetectManager(self, didRangeBeacons: beacons)
 	}
 	
 }
@@ -228,7 +228,7 @@ extension BluetoothManager {
 
 
 // MARK: CBCentralManager
-extension BluetoothManager {
+extension BeaconDetectManager {
 	
 	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		let cbstate = central.state
@@ -239,7 +239,7 @@ extension BluetoothManager {
 				break
 			}
 			
-			delegate.bluetoothManagerDidDisableBluetoothService(self)
+			delegate.beaconDetectManagerDidDisableBluetoothService(self)
 			stop()
 			
 		case .poweredOn:

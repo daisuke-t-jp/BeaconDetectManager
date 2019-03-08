@@ -12,8 +12,8 @@
 		026362952230E4A5008796BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026362932230E4A5008796BB /* Main.storyboard */; };
 		026362972230E4A9008796BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026362962230E4A9008796BB /* Assets.xcassets */; };
 		0263629A2230E4A9008796BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026362982230E4A9008796BB /* LaunchScreen.storyboard */; };
-		026362A52230E4A9008796BB /* BluetoothManagerDemo_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026362A42230E4A9008796BB /* BluetoothManagerDemo_iOSTests.swift */; };
-		EFDC4386FDD143CF00E02D51 /* Pods_BluetoothManagerDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A196934DF4CFF45C830972 /* Pods_BluetoothManagerDemo_iOS.framework */; };
+		026362A52230E4A9008796BB /* BeaconDetectManagerDemo_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026362A42230E4A9008796BB /* BeaconDetectManagerDemo_iOSTests.swift */; };
+		EFDC4386FDD143CF00E02D51 /* Pods_BeaconDetectManagerDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A196934DF4CFF45C830972 /* Pods_BeaconDetectManagerDemo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,24 +22,24 @@
 			containerPortal = 026362842230E4A5008796BB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0263628B2230E4A5008796BB;
-			remoteInfo = "BluetoothManagerDemo-iOS";
+			remoteInfo = "BeaconDetectManagerDemo-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0263628C2230E4A5008796BB /* BluetoothManagerDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothManagerDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0263628C2230E4A5008796BB /* BeaconDetectManagerDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaconDetectManagerDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0263628F2230E4A5008796BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026362912230E4A5008796BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		026362942230E4A5008796BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		026362962230E4A9008796BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026362992230E4A9008796BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0263629B2230E4A9008796BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026362A02230E4A9008796BB /* BluetoothManagerDemo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BluetoothManagerDemo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		026362A42230E4A9008796BB /* BluetoothManagerDemo_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerDemo_iOSTests.swift; sourceTree = "<group>"; };
+		026362A02230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeaconDetectManagerDemo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		026362A42230E4A9008796BB /* BeaconDetectManagerDemo_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetectManagerDemo_iOSTests.swift; sourceTree = "<group>"; };
 		026362A62230E4A9008796BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40594B0F0B8218F95B0FCB7C /* Pods-BluetoothManagerDemo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothManagerDemo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothManagerDemo-iOS/Pods-BluetoothManagerDemo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		55A196934DF4CFF45C830972 /* Pods_BluetoothManagerDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothManagerDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B890CBD5E866CA7AE1292E /* Pods-BluetoothManagerDemo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothManagerDemo-iOS.release.xcconfig"; path = "Target Support Files/Pods-BluetoothManagerDemo-iOS/Pods-BluetoothManagerDemo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		40594B0F0B8218F95B0FCB7C /* Pods-BeaconDetectManagerDemo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconDetectManagerDemo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-BeaconDetectManagerDemo-iOS/Pods-BeaconDetectManagerDemo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		55A196934DF4CFF45C830972 /* Pods_BeaconDetectManagerDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconDetectManagerDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B890CBD5E866CA7AE1292E /* Pods-BeaconDetectManagerDemo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconDetectManagerDemo-iOS.release.xcconfig"; path = "Target Support Files/Pods-BeaconDetectManagerDemo-iOS/Pods-BeaconDetectManagerDemo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDC4386FDD143CF00E02D51 /* Pods_BluetoothManagerDemo_iOS.framework in Frameworks */,
+				EFDC4386FDD143CF00E02D51 /* Pods_BeaconDetectManagerDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +64,8 @@
 		026362832230E4A5008796BB = {
 			isa = PBXGroup;
 			children = (
-				0263628E2230E4A5008796BB /* BluetoothManagerDemo-iOS */,
-				026362A32230E4A9008796BB /* BluetoothManagerDemo-iOSTests */,
+				0263628E2230E4A5008796BB /* BeaconDetectManagerDemo-iOS */,
+				026362A32230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests */,
 				0263628D2230E4A5008796BB /* Products */,
 				C2899A81B498D534B1F56B5F /* Pods */,
 				2116AFF972B456D1ED731987 /* Frameworks */,
@@ -75,13 +75,13 @@
 		0263628D2230E4A5008796BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0263628C2230E4A5008796BB /* BluetoothManagerDemo-iOS.app */,
-				026362A02230E4A9008796BB /* BluetoothManagerDemo-iOSTests.xctest */,
+				0263628C2230E4A5008796BB /* BeaconDetectManagerDemo-iOS.app */,
+				026362A02230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0263628E2230E4A5008796BB /* BluetoothManagerDemo-iOS */ = {
+		0263628E2230E4A5008796BB /* BeaconDetectManagerDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				0263628F2230E4A5008796BB /* AppDelegate.swift */,
@@ -91,22 +91,22 @@
 				026362982230E4A9008796BB /* LaunchScreen.storyboard */,
 				0263629B2230E4A9008796BB /* Info.plist */,
 			);
-			path = "BluetoothManagerDemo-iOS";
+			path = "BeaconDetectManagerDemo-iOS";
 			sourceTree = "<group>";
 		};
-		026362A32230E4A9008796BB /* BluetoothManagerDemo-iOSTests */ = {
+		026362A32230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				026362A42230E4A9008796BB /* BluetoothManagerDemo_iOSTests.swift */,
+				026362A42230E4A9008796BB /* BeaconDetectManagerDemo_iOSTests.swift */,
 				026362A62230E4A9008796BB /* Info.plist */,
 			);
-			path = "BluetoothManagerDemo-iOSTests";
+			path = "BeaconDetectManagerDemo-iOSTests";
 			sourceTree = "<group>";
 		};
 		2116AFF972B456D1ED731987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55A196934DF4CFF45C830972 /* Pods_BluetoothManagerDemo_iOS.framework */,
+				55A196934DF4CFF45C830972 /* Pods_BeaconDetectManagerDemo_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,8 +114,8 @@
 		C2899A81B498D534B1F56B5F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				40594B0F0B8218F95B0FCB7C /* Pods-BluetoothManagerDemo-iOS.debug.xcconfig */,
-				E8B890CBD5E866CA7AE1292E /* Pods-BluetoothManagerDemo-iOS.release.xcconfig */,
+				40594B0F0B8218F95B0FCB7C /* Pods-BeaconDetectManagerDemo-iOS.debug.xcconfig */,
+				E8B890CBD5E866CA7AE1292E /* Pods-BeaconDetectManagerDemo-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0263628B2230E4A5008796BB /* BluetoothManagerDemo-iOS */ = {
+		0263628B2230E4A5008796BB /* BeaconDetectManagerDemo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026362A92230E4A9008796BB /* Build configuration list for PBXNativeTarget "BluetoothManagerDemo-iOS" */;
+			buildConfigurationList = 026362A92230E4A9008796BB /* Build configuration list for PBXNativeTarget "BeaconDetectManagerDemo-iOS" */;
 			buildPhases = (
 				C897E2A4B8030D1860C77ADB /* [CP] Check Pods Manifest.lock */,
 				026362882230E4A5008796BB /* Sources */,
@@ -138,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = "BluetoothManagerDemo-iOS";
-			productName = "BluetoothManagerDemo-iOS";
-			productReference = 0263628C2230E4A5008796BB /* BluetoothManagerDemo-iOS.app */;
+			name = "BeaconDetectManagerDemo-iOS";
+			productName = "BeaconDetectManagerDemo-iOS";
+			productReference = 0263628C2230E4A5008796BB /* BeaconDetectManagerDemo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0263629F2230E4A9008796BB /* BluetoothManagerDemo-iOSTests */ = {
+		0263629F2230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026362AC2230E4A9008796BB /* Build configuration list for PBXNativeTarget "BluetoothManagerDemo-iOSTests" */;
+			buildConfigurationList = 026362AC2230E4A9008796BB /* Build configuration list for PBXNativeTarget "BeaconDetectManagerDemo-iOSTests" */;
 			buildPhases = (
 				0263629C2230E4A9008796BB /* Sources */,
 				0263629D2230E4A9008796BB /* Frameworks */,
@@ -156,9 +156,9 @@
 			dependencies = (
 				026362A22230E4A9008796BB /* PBXTargetDependency */,
 			);
-			name = "BluetoothManagerDemo-iOSTests";
-			productName = "BluetoothManagerDemo-iOSTests";
-			productReference = 026362A02230E4A9008796BB /* BluetoothManagerDemo-iOSTests.xctest */;
+			name = "BeaconDetectManagerDemo-iOSTests";
+			productName = "BeaconDetectManagerDemo-iOSTests";
+			productReference = 026362A02230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +169,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "BluetoothManagerDemo-iOS";
+				ORGANIZATIONNAME = "BeaconDetectManagerDemo-iOS";
 				TargetAttributes = {
 					0263628B2230E4A5008796BB = {
 						CreatedOnToolsVersion = 10.1;
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 026362872230E4A5008796BB /* Build configuration list for PBXProject "BluetoothManagerDemo-iOS" */;
+			buildConfigurationList = 026362872230E4A5008796BB /* Build configuration list for PBXProject "BeaconDetectManagerDemo-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -193,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0263628B2230E4A5008796BB /* BluetoothManagerDemo-iOS */,
-				0263629F2230E4A9008796BB /* BluetoothManagerDemo-iOSTests */,
+				0263628B2230E4A5008796BB /* BeaconDetectManagerDemo-iOS */,
+				0263629F2230E4A9008796BB /* BeaconDetectManagerDemo-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,18 +228,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BluetoothManagerDemo-iOS/Pods-BluetoothManagerDemo-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BluetoothManager/BluetoothManager.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BeaconDetectManagerDemo-iOS/Pods-BeaconDetectManagerDemo-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BeaconDetectManager/BeaconDetectManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BluetoothManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeaconDetectManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BluetoothManagerDemo-iOS/Pods-BluetoothManagerDemo-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeaconDetectManagerDemo-iOS/Pods-BeaconDetectManagerDemo-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C897E2A4B8030D1860C77ADB /* [CP] Check Pods Manifest.lock */ = {
@@ -257,7 +257,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BluetoothManagerDemo-iOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BeaconDetectManagerDemo-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026362A52230E4A9008796BB /* BluetoothManagerDemo_iOSTests.swift in Sources */,
+				026362A52230E4A9008796BB /* BeaconDetectManagerDemo_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +289,7 @@
 /* Begin PBXTargetDependency section */
 		026362A22230E4A9008796BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0263628B2230E4A5008796BB /* BluetoothManagerDemo-iOS */;
+			target = 0263628B2230E4A5008796BB /* BeaconDetectManagerDemo-iOS */;
 			targetProxy = 026362A12230E4A9008796BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -432,16 +432,16 @@
 		};
 		026362AA2230E4A9008796BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40594B0F0B8218F95B0FCB7C /* Pods-BluetoothManagerDemo-iOS.debug.xcconfig */;
+			baseConfigurationReference = 40594B0F0B8218F95B0FCB7C /* Pods-BeaconDetectManagerDemo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "BluetoothManagerDemo-iOS/Info.plist";
+				INFOPLIST_FILE = "BeaconDetectManagerDemo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BluetoothManagerDemo-iOS.BluetoothManagerDemo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,16 +450,16 @@
 		};
 		026362AB2230E4A9008796BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B890CBD5E866CA7AE1292E /* Pods-BluetoothManagerDemo-iOS.release.xcconfig */;
+			baseConfigurationReference = E8B890CBD5E866CA7AE1292E /* Pods-BeaconDetectManagerDemo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "BluetoothManagerDemo-iOS/Info.plist";
+				INFOPLIST_FILE = "BeaconDetectManagerDemo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BluetoothManagerDemo-iOS.BluetoothManagerDemo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,17 +472,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "BluetoothManagerDemo-iOSTests/Info.plist";
+				INFOPLIST_FILE = "BeaconDetectManagerDemo-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BluetoothManagerDemo-iOS.BluetoothManagerDemo-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothManagerDemo-iOS.app/BluetoothManagerDemo-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconDetectManagerDemo-iOS.app/BeaconDetectManagerDemo-iOS";
 			};
 			name = Debug;
 		};
@@ -492,24 +492,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "BluetoothManagerDemo-iOSTests/Info.plist";
+				INFOPLIST_FILE = "BeaconDetectManagerDemo-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BluetoothManagerDemo-iOS.BluetoothManagerDemo-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothManagerDemo-iOS.app/BluetoothManagerDemo-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconDetectManagerDemo-iOS.app/BeaconDetectManagerDemo-iOS";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		026362872230E4A5008796BB /* Build configuration list for PBXProject "BluetoothManagerDemo-iOS" */ = {
+		026362872230E4A5008796BB /* Build configuration list for PBXProject "BeaconDetectManagerDemo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026362A72230E4A9008796BB /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026362A92230E4A9008796BB /* Build configuration list for PBXNativeTarget "BluetoothManagerDemo-iOS" */ = {
+		026362A92230E4A9008796BB /* Build configuration list for PBXNativeTarget "BeaconDetectManagerDemo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026362AA2230E4A9008796BB /* Debug */,
@@ -527,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026362AC2230E4A9008796BB /* Build configuration list for PBXNativeTarget "BluetoothManagerDemo-iOSTests" */ = {
+		026362AC2230E4A9008796BB /* Build configuration list for PBXNativeTarget "BeaconDetectManagerDemo-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026362AD2230E4A9008796BB /* Debug */,

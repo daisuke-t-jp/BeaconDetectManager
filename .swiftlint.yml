@@ -1,5 +1,5 @@
 included:
-    - BluetoothManager
+    - BeaconDetectManager
 disabled_rules:
     - file_length
     - trailing_comma

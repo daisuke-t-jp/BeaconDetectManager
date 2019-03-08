@@ -1,15 +1,15 @@
 //
-//  BluetoothManagerTests.swift
-//  BluetoothManagerTests
+//  BeaconDetectManagerTests.swift
+//  BeaconDetectManagerTests
 //
 //  Created by Daisuke T on 2019/03/06.
-//  Copyright © 2019 BluetoothManager. All rights reserved.
+//  Copyright © 2019 BeaconDetectManager. All rights reserved.
 //
 
 import XCTest
-@testable import BluetoothManager
+@testable import BeaconDetectManager
 
-class BluetoothManagerTests: XCTestCase {
+class BeaconDetectManagerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

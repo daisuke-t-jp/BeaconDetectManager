@@ -1,47 +1,47 @@
 //
 //  ViewController.swift
-//  BluetoothManagerDemo-iOS
+//  BeaconDetectManagerDemo-iOS
 //
 //  Created by Daisuke T on 2019/03/07.
-//  Copyright © 2019 BluetoothManagerDemo-iOS. All rights reserved.
+//  Copyright © 2019 BeaconDetectManagerDemo-iOS. All rights reserved.
 //
 
 import UIKit
 import CoreLocation
-import BluetoothManager
+import BeaconDetectManager
 
-class ViewController: UIViewController, BluetoothManagerDelegate {
+class ViewController: UIViewController, BeaconDetectManagerDelegate {
 
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		BluetoothManager.sharedManager.delegate = self
+		BeaconDetectManager.sharedManager.delegate = self
 
 		// Start detect beacon with a proximityUUID. major and minor values will be wildcarded.
-		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+		BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
 											 eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
 
 		// Start detect beacon with a proximityUUID and major value. minor value will be wildcarded.
-//		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+//		BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
 //											 eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
-//											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd)])
+//											 majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd)])
 		
 		// Start detect beacon with a proximityUUID and major/minor values.
-//		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
+//		BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
 //											 eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
-//											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0001),
-//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0010),
-//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0100),
-//															   BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x1000),
-//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0001),
-//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0010),
-//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x0100),
-//															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
+//											 majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0001),
+//															   BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0010),
+//															   BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0100),
+//															   BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x1000),
+//															   BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0001),
+//															   BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0010),
+//															   BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0100),
+//															   BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
 	}
 	
-	func bluetoothManagerDidDisableLocationService(_ manager: BluetoothManager) {
-		print("bluetoothManagerDidDisableLocationService")
+	func beaconDetectManagerDidDisableLocationService(_ manager: BeaconDetectManager) {
+		print("beaconDetectManagerDidDisableLocationService")
 		
 		let alert: UIAlertController = UIAlertController(title: "Demo",
 														 message: "Please enable Location service",
@@ -68,8 +68,8 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 		present(alert, animated: true, completion: nil)
 	}
 	
-	func bluetoothManagerDidDisableBluetoothService(_ manager: BluetoothManager) {
-		print("bluetoothManagerDidDisableBluetoothService")
+	func beaconDetectManagerDidDisableBluetoothService(_ manager: BeaconDetectManager) {
+		print("beaconDetectManagerDidDisableBluetoothService")
 		
 		let alert: UIAlertController = UIAlertController(title: "Demo",
 														 message: "Please enable Bluetooth service",
