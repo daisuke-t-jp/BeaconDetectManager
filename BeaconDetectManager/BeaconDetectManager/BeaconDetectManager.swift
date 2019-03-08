@@ -16,7 +16,8 @@ public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentral
 	// MARK: - Enum, Const
 	public enum State {
 		case none
-		case requestAuthorization
+		case requestAuthorizationLocationService
+		case requestAuthorizationBluetoothService
 		case scanRunning
 	}
 	
@@ -70,6 +71,7 @@ extension BeaconDetectManager {
 		}
 		
 		guard state == .none else {
+			// Already started.
 			return
 		}
 		
@@ -77,11 +79,10 @@ extension BeaconDetectManager {
 		self.majorMinorArray = majorMinorArray
 		self.eventOption = eventOption
 		
-		state = State.requestAuthorization
 		
-		
-		// Check location auth status.
-		guard BeaconDetectManager.locationManagerAuthStatusWhenInUseOrAlways() else {
+		// Check location authorization status.
+		state = State.requestAuthorizationLocationService
+		guard BeaconDetectManager.locationManagerAuthorizationStatusWhenInUseOrAlways() else {
 			guard let delegate = delegate else {
 				return
 			}
@@ -92,7 +93,8 @@ extension BeaconDetectManager {
 		}
 		
 		
-		// Check Bluetooth switch status
+		// Check Bluetooth switch status.
+		state = State.requestAuthorizationBluetoothService
 		centralManager = CBCentralManager(delegate: self,
 										  queue: nil,
 										  options: [CBCentralManagerOptionShowPowerAlertKey: false])
@@ -108,7 +110,7 @@ extension BeaconDetectManager {
 		let beaconID = String(describing: type(of: self)) + proximityUUID
 		
 		if majorMinorArray.count == 1 {
-			let majorMinor = majorMinorArray[0]
+			let majorMinor = majorMinorArray.first!
 			if let minor = majorMinor.minor {
 				// Detect beacon with a proximityUUID and major/minor values.
 				detectTarget = .proximityUUIDAndMajorMinor
@@ -164,7 +166,7 @@ extension BeaconDetectManager {
 // MARK: - LocationManager
 extension BeaconDetectManager {
 	
-	static private func locationManagerAuthStatusWhenInUseOrAlways() -> Bool {
+	static private func locationManagerAuthorizationStatusWhenInUseOrAlways() -> Bool {
 		let status = CLLocationManager.authorizationStatus()
 		
 		if status == .authorizedWhenInUse {
@@ -229,9 +231,9 @@ extension BeaconDetectManager {
 extension BeaconDetectManager {
 	
 	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
-		let cbstate = central.state
+		let centralState = central.state
 		
-		switch cbstate {
+		switch centralState {
 		case .poweredOff:
 			guard let delegate = delegate else {
 				break
