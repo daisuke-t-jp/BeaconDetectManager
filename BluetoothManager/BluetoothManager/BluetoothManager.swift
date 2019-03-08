@@ -33,7 +33,7 @@ CBCentralManagerDelegate {
 	public private(set) var state: State = .none
 	public private(set) var proximityUUID: String = ""
 	public private(set) var majorMinorArray: [MajorMinor] = [MajorMinor]()
-	public private(set) var rangingTarget: RangingTarget = .proximityUUID
+	public private(set) var detectTarget: DetectTarget = .proximityUUID
 	public private(set) var rangingOption: RangingOption = []
 	
 	// MARK: - Singleton
@@ -94,17 +94,17 @@ extension BluetoothManager {
 		if majorMinorArray.count == 1 {
 			let majorMinor = majorMinorArray[0]
 			if let minor = majorMinor.minor {
-				// Ranging with a proximityUUID and major/minor values.
-				rangingTarget = .proximityUUIDAndMajorMinor
+				// Detect beacon with a proximityUUID and major/minor values.
+				detectTarget = .proximityUUIDAndMajorMinor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, minor: minor, identifier: beaconID)
 			} else {
-				// Ranging with a proximityUUID and major value. minor value will be wildcarded.
-				rangingTarget = .proximityUUIDAndMajor
+				// Detect beacon with a proximityUUID and major value. minor value will be wildcarded.
+				detectTarget = .proximityUUIDAndMajor
 				beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: majorMinor.major, identifier: beaconID)
 			}
 		} else {
-			// Ranging with a proximityUUID. major and minor values will be wildcarded.
-			rangingTarget = .proximityUUID
+			// Detect beacon with a proximityUUID. major and minor values will be wildcarded.
+			detectTarget = .proximityUUID
 			beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: beaconID)
 		}
 		

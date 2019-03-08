@@ -18,16 +18,16 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 		
 		BluetoothManager.sharedManager.delegate = self
 
-		// Start ranging with a proximityUUID. major and minor values will be wildcarded.
+		// Start detect beacon with a proximityUUID. major and minor values will be wildcarded.
 		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
 											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
 
-		// Start ranging with a proximityUUID and major value. minor value will be wildcarded.
+		// Start detect beacon with a proximityUUID and major value. minor value will be wildcarded.
 //		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
 //											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
 //											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd)])
 		
-		// Start ranging with a proximityUUID and major/minor values.
+		// Start detect beacon with a proximityUUID and major/minor values.
 //		BluetoothManager.sharedManager.start("YOUR PROXIMITY UUID",
 //											 rangingOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
 //											 majorMinorArray: [BluetoothManager.MajorMinor(major: 0xabcd, minor: 0x0001),

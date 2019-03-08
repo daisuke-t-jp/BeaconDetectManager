@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02D66BE92231E76800BFB8B8 /* RangingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BE82231E76800BFB8B8 /* RangingOption.swift */; };
-		02D66BED2231E8A600BFB8B8 /* RangingTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BEC2231E8A600BFB8B8 /* RangingTarget.swift */; };
+		02D66BED2231E8A600BFB8B8 /* DetectTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */; };
 		02D66BEF2231E95300BFB8B8 /* MajorMinor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */; };
 		02D66BF12231EB5800BFB8B8 /* BluetoothManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */; };
 		7ED93959222FF46200D35C09 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9394F222FF46200D35C09 /* BluetoothManager.framework */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		02D66BE82231E76800BFB8B8 /* RangingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangingOption.swift; sourceTree = "<group>"; };
-		02D66BEC2231E8A600BFB8B8 /* RangingTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangingTarget.swift; sourceTree = "<group>"; };
+		02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectTarget.swift; sourceTree = "<group>"; };
 		02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorMinor.swift; sourceTree = "<group>"; };
 		02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerDelegate.swift; sourceTree = "<group>"; };
 		7ED9394F222FF46200D35C09 /* BluetoothManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluetoothManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +85,7 @@
 				7ED93952222FF46200D35C09 /* BluetoothManager.h */,
 				02D66BEE2231E95300BFB8B8 /* MajorMinor.swift */,
 				02D66BE82231E76800BFB8B8 /* RangingOption.swift */,
-				02D66BEC2231E8A600BFB8B8 /* RangingTarget.swift */,
+				02D66BEC2231E8A600BFB8B8 /* DetectTarget.swift */,
 				02D66BF02231EB5800BFB8B8 /* BluetoothManagerDelegate.swift */,
 				7ED93969222FF63D00D35C09 /* BluetoothManager.swift */,
 			);
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D66BED2231E8A600BFB8B8 /* RangingTarget.swift in Sources */,
+				02D66BED2231E8A600BFB8B8 /* DetectTarget.swift in Sources */,
 				02D66BEF2231E95300BFB8B8 /* MajorMinor.swift in Sources */,
 				7ED9396A222FF63D00D35C09 /* BluetoothManager.swift in Sources */,
 				02D66BE92231E76800BFB8B8 /* RangingOption.swift in Sources */,
