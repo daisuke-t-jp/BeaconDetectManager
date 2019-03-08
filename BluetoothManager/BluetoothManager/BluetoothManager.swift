@@ -10,30 +10,6 @@ import Foundation
 import CoreLocation
 import CoreBluetooth
 
-// MARK: - BluetoothManagerDelegate
-public protocol BluetoothManagerDelegate: class {
-	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion)
-	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion)
-	func bluetoothManager(_ manager: BluetoothManager, didRangeBeacons beacons: [CLBeacon])
-	func bluetoothManagerDidDisableLocation(_ manager: BluetoothManager)
-	func bluetoothManagerDidDisableBluetooth(_ manager: BluetoothManager)
-}
-
-// MARK: - BluetoothManagerDelegate(Optional)
-public extension BluetoothManagerDelegate {
-	func bluetoothManager(_ manager: BluetoothManager, didEnterRegion region: CLRegion) {
-		// Empty implementation to be "optional"
-	}
-
-	func bluetoothManager(_ manager: BluetoothManager, didExitRegion region: CLRegion) {
-		// Empty implementation to be "optional"
-	}
-
-	func bluetoothManager(_ manager: BluetoothManager, didRangeBeacons beacons: [CLBeacon]) {
-		// Empty implementation to be "optional"
-	}
-}
-
 
 
 // MARK: - BluetoothManager
@@ -46,45 +22,6 @@ CBCentralManagerDelegate {
 		case none
 		case requestAuthorization
 		case scanRunning
-	}
-	
-	public struct MajorMinor {
-		public var major: CLBeaconMajorValue
-		public var minor: CLBeaconMinorValue?
-		
-		public init(major: CLBeaconMajorValue) {
-			self.major = major
-		}
-		
-		public init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
-			self.major = major
-			self.minor = minor
-		}
-	}
-	
-	public enum RangingTarget {
-		case proximityUUID
-		case proximityUUIDAndMajor
-		case proximityUUIDAndMajorMinor
-	}
-	
-	public struct RangingOption: OptionSet {
-		
-		// MARK: - Enum, Const
-		public static let didEnterRegion = RangingOption(rawValue: 1 << 0)
-		public static let didExitRegion = RangingOption(rawValue: 1 << 1)
-		public static let didRangeBeacons = RangingOption(rawValue: 1 << 2)
-		
-		
-		// MARK: - Property
-		public let rawValue: Int
-		
-		
-		// MARK: - Initializer
-		public init(rawValue: Int) {
-			self.rawValue = rawValue
-		}
-		
 	}
 	
 	
@@ -133,7 +70,7 @@ extension BluetoothManager {
 				return
 			}
 			
-			delegate.bluetoothManagerDidDisableLocation(self)
+			delegate.bluetoothManagerDidDisableLocationService(self)
 			
 			return
 		}
@@ -283,7 +220,7 @@ extension BluetoothManager {
 				break
 			}
 			
-			delegate.bluetoothManagerDidDisableBluetooth(self)
+			delegate.bluetoothManagerDidDisableBluetoothService(self)
 			stop()
 			
 		case .poweredOn:

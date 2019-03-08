@@ -40,8 +40,8 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 //															   BluetoothManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
 	}
 	
-	func bluetoothManagerDidDisableLocation(_ manager: BluetoothManager) {
-		print("bluetoothManagerDidDisableLocation")
+	func bluetoothManagerDidDisableLocationService(_ manager: BluetoothManager) {
+		print("bluetoothManagerDidDisableLocationService")
 		
 		let alert: UIAlertController = UIAlertController(title: "Demo",
 														 message: "Please enable Location service",
@@ -68,7 +68,9 @@ class ViewController: UIViewController, BluetoothManagerDelegate {
 		present(alert, animated: true, completion: nil)
 	}
 	
-	func bluetoothManagerDidDisableBluetooth(_ manager: BluetoothManager) {
+	func bluetoothManagerDidDisableBluetoothService(_ manager: BluetoothManager) {
+		print("bluetoothManagerDidDisableBluetoothService")
+		
 		let alert: UIAlertController = UIAlertController(title: "Demo",
 														 message: "Please enable Bluetooth service",
 														 preferredStyle: .alert)
