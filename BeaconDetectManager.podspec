@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
                    DESC
 
   spec.homepage     = "https://github.com/daisuke-t-jp/BeaconDetectManager"
-  # spec.screenshots  = "https://raw.githubusercontent.com/daisuke-t-jp/BeaconDetectManager/master/images/header.png"
+  spec.screenshots  = "https://raw.githubusercontent.com/daisuke-t-jp/BeaconDetectManager/master/images/header.png"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
