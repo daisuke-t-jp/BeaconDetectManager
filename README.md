@@ -10,6 +10,8 @@
 # Introduction
 
 iBeacon detect manager framework in Swift.
+  
+[Documentation](https://daisuke-t-jp.github.io/BeaconDetectManager/)
 
 
 # Requirements
