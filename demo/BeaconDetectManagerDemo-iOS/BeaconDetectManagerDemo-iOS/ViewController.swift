@@ -96,5 +96,16 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate {
 		present(alert, animated: true, completion: nil)
 	}
 	
+	// Delegate called when user entered the specified region.
+	func beaconDetectManager(_ manager: BeaconDetectManager, didEnterRegion region: CLRegion) {
+	}
+
+	// Delegate called when user exited the specified region.
+	func beaconDetectManager(_ manager: BeaconDetectManager, didExitRegion region: CLRegion) {
+	}
+	
+	// Delegate called when one or more beacons are in range.
+	func beaconDetectManager(_ manager: BeaconDetectManager, didRangeBeacons beacons: [CLBeacon]) {
+	}
 }
 
