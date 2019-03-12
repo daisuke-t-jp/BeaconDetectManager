@@ -14,10 +14,19 @@ import CoreBluetooth
 public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
 	
 	// MARK: - Enum, Const
+	
+	/// Manager status.
 	public enum State {
+		/// No processing
 		case none
+
+		/// Requesting authorization of location service
 		case requestAuthorizationLocationService
+		
+		/// Requesting authorization of bluetooth service
 		case requestAuthorizationBluetoothService
+		
+		/// Scan running
 		case scanRunning
 	}
 	
@@ -27,7 +36,7 @@ public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentral
 	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
 	private var locationManager: CLLocationManager = CLLocationManager()
 	
-	// A delegate of BeaconDetectManager.
+	/// A delegate of BeaconDetectManager.
 	weak public var delegate: BeaconDetectManagerDelegate?
 	
 	/// Current state
@@ -39,7 +48,7 @@ public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentral
 	/// An array of target's major/minor.
 	public private(set) var majorMinorArray: [MajorMinor] = [MajorMinor]()
 	
-	// Detect target type.
+	/// Detect target type.
 	public private(set) var detectTarget: DetectTarget = .proximityUUID
 	
 	// Allowed event.
@@ -230,6 +239,7 @@ extension BeaconDetectManager {
 // MARK: CBCentralManager
 extension BeaconDetectManager {
 	
+	/// Invoked whenever the central manager's state has been updated
 	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		let centralState = central.state
 		
