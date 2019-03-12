@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BeaconDetectManagerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/BeaconDetectManagerDelegate" class="dashAnchor"></a>
+    <a title="BeaconDetectManagerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BeaconDetectManager Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="https://github.com/daisuke-t-jp/BeaconDetectManager"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BeaconDetectManager Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BeaconDetectManagerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/DetectTarget.html">– DetectTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/EventOption.html">– EventOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/MajorMinor.html">– MajorMinor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BeaconDetectManagerDelegate.html">BeaconDetectManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BeaconDetectManagerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">BeaconDetectManagerDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The delegate of BeaconDetectManager class.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_14didEnterRegionyA2AC_So8CLRegionCtF"></a>
+                    <a name="//apple_ref/swift/Method/beaconDetectManager(_:didEnterRegion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_14didEnterRegionyA2AC_So8CLRegionCtF">beaconDetectManager(_:didEnterRegion:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate called when user entered the specified region.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a></span><span class="p">,</span> <span class="n">didEnterRegion</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">CLRegion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The BeaconDetectManager reporting the event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>region</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An region that was enterd.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_13didExitRegionyA2AC_So8CLRegionCtF"></a>
+                    <a name="//apple_ref/swift/Method/beaconDetectManager(_:didExitRegion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_13didExitRegionyA2AC_So8CLRegionCtF">beaconDetectManager(_:didExitRegion:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate called when user exited the specified region.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a></span><span class="p">,</span> <span class="n">didExitRegion</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">CLRegion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The BeaconDetectManager reporting the event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>region</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An region that was exited.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_15didRangeBeaconsyA2AC_SaySo8CLBeaconCGtF"></a>
+                    <a name="//apple_ref/swift/Method/beaconDetectManager(_:didRangeBeacons:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManager0abC8DelegateP06beaconbC0_15didRangeBeaconsyA2AC_SaySo8CLBeaconCGtF">beaconDetectManager(_:didRangeBeacons:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate called when one or more beacons are in range.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a></span><span class="p">,</span> <span class="n">didRangeBeacons</span> <span class="nv">beacons</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLBeacon</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The BeaconDetectManager reporting the event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>beacons</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of CLBeacon objects representing the beacons currently in range.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManager0abC8DelegateP06beaconbC25DidDisableLocationServiceyyA2ACF"></a>
+                    <a name="//apple_ref/swift/Method/beaconDetectManagerDidDisableLocationService(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManager0abC8DelegateP06beaconbC25DidDisableLocationServiceyyA2ACF">beaconDetectManagerDidDisableLocationService(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate called when disabled location service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beaconDetectManagerDidDisableLocationService</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The BeaconDetectManager reporting the event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManager0abC8DelegateP06beaconbC26DidDisableBluetoothServiceyyA2ACF"></a>
+                    <a name="//apple_ref/swift/Method/beaconDetectManagerDidDisableBluetoothService(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManager0abC8DelegateP06beaconbC26DidDisableBluetoothServiceyyA2ACF">beaconDetectManagerDidDisableBluetoothService(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate called when disabled bluetooth service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beaconDetectManagerDidDisableBluetoothService</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The BeaconDetectManager reporting the event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/daisuke-t-jp/BeaconDetectManager" target="_blank" rel="external">Daisuke T</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

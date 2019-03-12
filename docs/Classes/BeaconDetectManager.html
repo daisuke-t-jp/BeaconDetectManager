@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BeaconDetectManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BeaconDetectManager" class="dashAnchor"></a>
+    <a title="BeaconDetectManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BeaconDetectManager Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="https://github.com/daisuke-t-jp/BeaconDetectManager"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BeaconDetectManager Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BeaconDetectManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager.html">BeaconDetectManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/DetectTarget.html">– DetectTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/EventOption.html">– EventOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconDetectManager/MajorMinor.html">– MajorMinor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BeaconDetectManagerDelegate.html">BeaconDetectManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BeaconDetectManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BeaconDetectManager</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CLLocationManagerDelegate</span><span class="p">,</span> <span class="kt">CBCentralManagerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Beacon detect manager class</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enum,%20Const"></a>
+                <a name="//apple_ref/swift/Section/Enum, Const" class="dashAnchor"></a>
+                <a href="#/Enum,%20Const">
+                  <h3 class="section-name">Enum, Const</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC5StateO"></a>
+                    <a name="//apple_ref/swift/Enum/State" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC5StateO">State</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Manager status.</p>
+
+                        <a href="../Classes/BeaconDetectManager/State.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">State</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Property"></a>
+                <a name="//apple_ref/swift/Section/Property" class="dashAnchor"></a>
+                <a href="#/Property">
+                  <h3 class="section-name">Property</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC8delegateAA0abC8Delegate_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC8delegateAA0abC8Delegate_pSgXwvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A delegate of BeaconDetectManager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BeaconDetectManagerDelegate.html">BeaconDetectManagerDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC5stateAB5StateOvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC5stateAB5StateOvp">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt"><a href="../Classes/BeaconDetectManager/State.html">State</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC13proximityUUIDSSvp"></a>
+                    <a name="//apple_ref/swift/Property/proximityUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC13proximityUUIDSSvp">proximityUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A target&rsquo;s ProximityUUID</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">proximityUUID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC15majorMinorArraySayAB05MajorE0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/majorMinorArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC15majorMinorArraySayAB05MajorE0VGvp">majorMinorArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of target&rsquo;s major/minor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">majorMinorArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt"><a href="../Classes/BeaconDetectManager/MajorMinor.html">MajorMinor</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC12detectTargetAB0bE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/detectTarget" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC12detectTargetAB0bE0Ovp">detectTarget</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Detect target type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">detectTarget</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt"><a href="../Classes/BeaconDetectManager/DetectTarget.html">DetectTarget</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC11eventOptionAB05EventE0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/eventOption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC11eventOptionAB05EventE0Vvp">eventOption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">eventOption</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt"><a href="../Classes/BeaconDetectManager/EventOption.html">EventOption</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Singleton"></a>
+                <a name="//apple_ref/swift/Section/Singleton" class="dashAnchor"></a>
+                <a href="#/Singleton">
+                  <h3 class="section-name">Singleton</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC06sharedC0ABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/sharedManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC06sharedC0ABvpZ">sharedManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Singleton shared instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedManager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Operation"></a>
+                <a name="//apple_ref/swift/Section/Operation" class="dashAnchor"></a>
+                <a href="#/Operation">
+                  <h3 class="section-name">Operation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC5start_11eventOption15majorMinorArrayySS_AB05EventF0VSayAB05MajorH0VGtF"></a>
+                    <a name="//apple_ref/swift/Method/start(_:eventOption:majorMinorArray:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC5start_11eventOption15majorMinorArrayySS_AB05EventF0VSayAB05MajorH0VGtF">start(_:eventOption:majorMinorArray:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start detecting beacon.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">_</span> <span class="nv">proximityUUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">eventOption</span><span class="p">:</span> <span class="kt"><a href="../Classes/BeaconDetectManager/EventOption.html">EventOption</a></span><span class="p">,</span> <span class="nv">majorMinorArray</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/BeaconDetectManager/MajorMinor.html">MajorMinor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt"><a href="../Classes/BeaconDetectManager/MajorMinor.html">MajorMinor</a></span><span class="p">]())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>proximityUUID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A target&rsquo;s ProximityUUID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>eventOption</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Allowed event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>majorMinorArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of target&rsquo;s major/minor. Default is empty array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop detecting beacon.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CBCentralManager"></a>
+                <a name="//apple_ref/swift/Section/CBCentralManager" class="dashAnchor"></a>
+                <a href="#/CBCentralManager">
+                  <h3 class="section-name">CBCentralManager</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BeaconDetectManager@objc(cs)BeaconDetectManager(im)centralManagerDidUpdateState:"></a>
+                    <a name="//apple_ref/swift/Method/centralManagerDidUpdateState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BeaconDetectManager@objc(cs)BeaconDetectManager(im)centralManagerDidUpdateState:">centralManagerDidUpdateState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked whenever the central manager&rsquo;s state has been updated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">centralManagerDidUpdateState</span><span class="p">(</span><span class="n">_</span> <span class="nv">central</span><span class="p">:</span> <span class="kt">CBCentralManager</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC0B6TargetO"></a>
+                    <a name="//apple_ref/swift/Enum/DetectTarget" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC0B6TargetO">DetectTarget</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Detect targets</p>
+
+                        <a href="../Classes/BeaconDetectManager/DetectTarget.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DetectTarget</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC11EventOptionV"></a>
+                    <a name="//apple_ref/swift/Struct/EventOption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC11EventOptionV">EventOption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Event option</p>
+
+                        <a href="../Classes/BeaconDetectManager/EventOption.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">EventOption</span> <span class="p">:</span> <span class="kt">OptionSet</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19BeaconDetectManagerAAC10MajorMinorV"></a>
+                    <a name="//apple_ref/swift/Struct/MajorMinor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19BeaconDetectManagerAAC10MajorMinorV">MajorMinor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Beacon major and minor values.</p>
+
+                        <a href="../Classes/BeaconDetectManager/MajorMinor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MajorMinor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/daisuke-t-jp/BeaconDetectManager" target="_blank" rel="external">Daisuke T</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
