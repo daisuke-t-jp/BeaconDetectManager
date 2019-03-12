@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "BeaconDetectManager"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "iBeacon detect manager framework in Swift."
 
   spec.description  = <<-DESC
