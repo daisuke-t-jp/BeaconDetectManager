@@ -52,21 +52,21 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate // <- ! {
 
 ## Start Detecting
 
+### Start detect beacon with a proximityUUID. major and minor values will be wildcarded. 
 ```swift
-// Start detect beacon with a proximityUUID. major and minor values will be wildcarded.
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
     eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
-    
-// or
+```    
 
-// Start detect beacon with a proximityUUID and major value. minor value will be wildcarded.
+### Start detect beacon with a proximityUUID and major value. minor value will be wildcarded. 
+```swift
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
     eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
     majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd)])
+```
 
-// or
-
-// Start detect beacon with a proximityUUID and major/minor values.
+### Start detect beacon with a proximityUUID and major/minor values.
+```swift
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
     eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
     majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0001),
