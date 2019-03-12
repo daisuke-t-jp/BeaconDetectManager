@@ -11,13 +11,14 @@ import Foundation
 extension BeaconDetectManager {
 	
 	/// Detect targets
-	///
-	/// - proximityUUID: Detect beacon with a proximityUUID. major and minor values will be wildcarded.
-	/// - proximityUUIDAndMajor: Detect beacon with a proximityUUID and major value. minor value will be wildcarded.
-	/// - proximityUUIDAndMajorMinor: Detect beacon with a proximityUUID and major/minor values.
 	public enum DetectTarget {
+		/// Detect beacon with a proximityUUID. major and minor values will be wildcarded.
 		case proximityUUID
+		
+		/// Detect beacon with a proximityUUID and major value. minor value will be wildcarded.
 		case proximityUUIDAndMajor
+		
+		/// Detect beacon with a proximityUUID and major/minor values.
 		case proximityUUIDAndMajorMinor
 	}
 	
