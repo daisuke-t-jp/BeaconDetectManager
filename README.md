@@ -18,6 +18,20 @@ iBeacon detect manager framework in Swift.
 - Swift 4.2+
 
 
+# Installation
+## Carthage
+`github "daisuke-t-jp/BeaconDetectManager"`
+
+## CocoaPods
+```
+use_frameworks!
+
+target 'target' do
+pod 'BeaconDetectManager'
+end
+```
+
+
 # Usage
 ## Import Framework
 
