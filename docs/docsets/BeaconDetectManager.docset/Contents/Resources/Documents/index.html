@@ -61,16 +61,92 @@
         <section>
           <section class="section">
             
-            <h1 id='beacondetectmanager' class='heading'>BeaconDetectManager</h1>
-<h3 id='ibeacon-detect-manager-framework-in-swift' class='heading'>iBeacon detect manager framework in Swift.</h3>
+            <h2 id='img-src-https-raw-githubusercontent-com-daisuke-t-jp-beacondetectmanager-master-images-header-png-width-700-br' class='heading'><img src="https://raw.githubusercontent.com/daisuke-t-jp/BeaconDetectManager/master/images/header.png" width="700"></br></h2>
+
+<p><img src="https://img.shields.io/badge/Platform-iOS%20%7C%20macOS%20%7C%20tvOS-blue.svg" alt="Platform">
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Language-Swift%204.2-orange.svg" alt="Language Swift%204.2"></a>
+<a href="https://cocoapods.org/pods/BeaconDetectManager"><img src="https://img.shields.io/cocoapods/v/BeaconDetectManager.svg" alt="Cocoapods"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-green.svg" alt="Carthage compatible"></a>
+<a href="https://travis-ci.org/daisuke-t-jp/BeaconDetectManager"><img src="https://travis-ci.org/daisuke-t-jp/BeaconDetectManager.svg?branch=master" alt="Build Status"></a></p>
+<h1 id='introduction' class='heading'>Introduction</h1>
 
 <p>iBeacon detect manager framework in Swift.</p>
-<h3 id='installation' class='heading'>Installation</h3>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'BeaconDetectManager'</span>
-</code></pre>
-<h3 id='authors' class='heading'>Authors</h3>
+<h1 id='requirements' class='heading'>Requirements</h1>
 
-<p>Daisuke T</p>
+<ul>
+<li>Platforms
+
+<ul>
+<li>iOS 10.0+</li>
+</ul></li>
+<li>Swift 4.2+</li>
+</ul>
+<h1 id='installation' class='heading'>Installation</h1>
+<h2 id='carthage' class='heading'>Carthage</h2>
+
+<p><code>github &quot;daisuke-t-jp/BeaconDetectManager&quot;</code></p>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
+<pre class="highlight plaintext"><code>use_frameworks!
+
+target 'target' do
+pod 'BeaconDetectManager'
+end
+</code></pre>
+<h1 id='usage' class='heading'>Usage</h1>
+<h2 id='import-framework' class='heading'>Import Framework</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BeaconDetectManager</span>
+</code></pre>
+<h2 id='using-delegate' class='heading'>Using Delegate</h2>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">BeaconDetectManagerDelegate</span> <span class="c1">// &lt;- ! {</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="n">sharedManager</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// &lt;- !</span>
+</code></pre>
+<h2 id='start-detecting' class='heading'>Start Detecting</h2>
+<h3 id='start-detect-beacon-with-a-proximityuuid-major-and-minor-values-will-be-wildcarded' class='heading'>Start detect beacon with a proximityUUID. major and minor values will be wildcarded.</h3>
+<pre class="highlight swift"><code><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="n">sharedManager</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="s">"YOUR PROXIMITY UUID"</span><span class="p">,</span>
+    <span class="nv">eventOption</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">didEnterRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didExitRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didRangeBeacons</span><span class="p">])</span>
+</code></pre>
+<h3 id='start-detect-beacon-with-a-proximityuuid-and-major-value-minor-value-will-be-wildcarded' class='heading'>Start detect beacon with a proximityUUID and major value. minor value will be wildcarded.</h3>
+<pre class="highlight swift"><code><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="n">sharedManager</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="s">"YOUR PROXIMITY UUID"</span><span class="p">,</span>
+    <span class="nv">eventOption</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">didEnterRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didExitRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didRangeBeacons</span><span class="p">],</span>
+    <span class="nv">majorMinorArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xabcd</span><span class="p">)])</span>
+</code></pre>
+<h3 id='start-detect-beacon-with-a-proximityuuid-and-major-minor-values' class='heading'>Start detect beacon with a proximityUUID and major/minor values.</h3>
+<pre class="highlight swift"><code><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="n">sharedManager</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="s">"YOUR PROXIMITY UUID"</span><span class="p">,</span>
+    <span class="nv">eventOption</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">didEnterRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didExitRegion</span><span class="p">,</span> <span class="o">.</span><span class="n">didRangeBeacons</span><span class="p">],</span>
+    <span class="nv">majorMinorArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xabcd</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0001</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xabcd</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0010</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xabcd</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0100</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xabcd</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x1000</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xdcba</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0001</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xdcba</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0010</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xdcba</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x0100</span><span class="p">),</span>
+        <span class="kt">BeaconDetectManager</span><span class="o">.</span><span class="kt">MajorMinor</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="mh">0xdcba</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mh">0x1000</span><span class="p">)])</span>
+</code></pre>
+<h2 id='implementation-delegate' class='heading'>Implementation Delegate</h2>
+<pre class="highlight swift"><code><span class="c1">// Delegate called when disabled location service.</span>
+<span class="kd">func</span> <span class="nf">beaconDetectManagerDidDisableLocationService</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="c1">// Delegate called when disabled bluetooth service.</span>
+<span class="kd">func</span> <span class="nf">beaconDetectManagerDidDisableBluetoothService</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="c1">// Delegate called when user entered the specified region.</span>
+<span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="p">,</span> <span class="n">didEnterRegion</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">CLRegion</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="c1">// Delegate called when user exited the specified region.</span>
+<span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="p">,</span> <span class="n">didEnterRegion</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">CLRegion</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="c1">// Delegate called when one or more beacons are in range.</span>
+<span class="kd">func</span> <span class="nf">beaconDetectManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">BeaconDetectManager</span><span class="p">,</span> <span class="n">didRangeBeacons</span> <span class="nv">beacons</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLBeacon</span><span class="p">])</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
 
           </section>
         </section>
