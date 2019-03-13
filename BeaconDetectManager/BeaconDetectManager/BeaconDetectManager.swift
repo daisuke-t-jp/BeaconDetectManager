@@ -33,7 +33,7 @@ public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentral
 	
 	// MARK: - Property
 	private var centralManager: CBCentralManager = CBCentralManager()
-	private var beaconRegion: CLBeaconRegion = CLBeaconRegion()
+	private var beaconRegion: CLBeaconRegion?
 	private var locationManager: CLLocationManager = CLLocationManager()
 	
 	/// A delegate of BeaconDetectManager.
@@ -135,6 +135,9 @@ extension BeaconDetectManager {
 			beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: beaconID)
 		}
 		
+		guard let beaconRegion = self.beaconRegion else {
+			return
+		}
 		
 		beaconRegion.notifyEntryStateOnDisplay = false
 		beaconRegion.notifyOnEntry = false
@@ -164,7 +167,11 @@ extension BeaconDetectManager {
 		
 		centralManager.delegate = nil
 		
-		locationManager.stopRangingBeacons(in: beaconRegion)
+		if let beaconRegion = beaconRegion {
+			locationManager.stopRangingBeacons(in: beaconRegion)
+		}
+
+		beaconRegion = nil
 		locationManager.delegate = nil
 	}
 	
