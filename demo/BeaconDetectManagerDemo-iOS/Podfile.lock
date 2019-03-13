@@ -1,5 +1,5 @@
 PODS:
-  - BeaconDetectManager (1.0.2)
+  - BeaconDetectManager (1.0.3)
 
 DEPENDENCIES:
   - BeaconDetectManager (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  BeaconDetectManager: 6ac29d3a6555f7d362e50975008602c4195abc29
+  BeaconDetectManager: 66794de20dadad2ad67045d3de63daeab100d51a
 
 PODFILE CHECKSUM: efb74858bd6a3e7a540787b493b04bceb4279d0a
 
