@@ -203,7 +203,7 @@ extension BeaconDetectManager {
 // MARK: - LocationManager(Delegate)
 extension BeaconDetectManager {
 	
-	private func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+	public func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		guard eventOption.contains(.didEnterRegion) else {
 			return
 		}
@@ -215,7 +215,7 @@ extension BeaconDetectManager {
 		delegate.beaconDetectManager(self, didEnterRegion: region)
 	}
 	
-	private func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+	public func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
 		guard eventOption.contains(.didExitRegion) else {
 			return
 		}
@@ -227,7 +227,7 @@ extension BeaconDetectManager {
 		delegate.beaconDetectManager(self, didExitRegion: region)
 	}
 	
-	private func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+	public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
 		guard eventOption.contains(.didRangeBeacons) else {
 			return
 		}

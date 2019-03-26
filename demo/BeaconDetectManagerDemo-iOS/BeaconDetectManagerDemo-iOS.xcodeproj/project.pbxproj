@@ -172,9 +172,11 @@
 				TargetAttributes = {
 					0263628B2230E4A5008796BB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					0263629F2230E4A9008796BB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0263628B2230E4A5008796BB;
 					};
 				};
@@ -444,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -464,7 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,7 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconDetectManagerDemo-iOS.app/BeaconDetectManagerDemo-iOS";
 			};
@@ -503,7 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BeaconDetectManagerDemo-iOS.BeaconDetectManagerDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconDetectManagerDemo-iOS.app/BeaconDetectManagerDemo-iOS";
 			};
