@@ -45,11 +45,10 @@ import BeaconDetectManager
 
 ```swift
 class ViewController: UIViewController, BeaconDetectManagerDelegate // <- ! {
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        BeaconDetectManager.sharedManager.delegate = self // <- !
+    BeaconDetectManager.sharedManager.delegate = self // <- !
 ```
 
 ## Start Detecting
@@ -57,28 +56,28 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate // <- ! {
 ### Start detect beacon with a proximityUUID. major and minor values will be wildcarded. 
 ```swift
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
-    eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
+  eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons])
 ```    
 
 ### Start detect beacon with a proximityUUID and major value. minor value will be wildcarded. 
 ```swift
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
-    eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
-    majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd)])
+  eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
+  majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd)])
 ```
 
 ### Start detect beacon with a proximityUUID and major/minor values.
 ```swift
 BeaconDetectManager.sharedManager.start("YOUR PROXIMITY UUID",
-    eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
-    majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0001),
-        BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0010),
-        BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0100),
-        BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x1000),
-        BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0001),
-        BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0010),
-        BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0100),
-        BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
+  eventOption: [.didEnterRegion, .didExitRegion, .didRangeBeacons],
+  majorMinorArray: [BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0001),
+    BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0010),
+    BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x0100),
+    BeaconDetectManager.MajorMinor(major: 0xabcd, minor: 0x1000),
+    BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0001),
+    BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0010),
+    BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x0100),
+    BeaconDetectManager.MajorMinor(major: 0xdcba, minor: 0x1000)])
 ```
 
 ## Implementation Delegate

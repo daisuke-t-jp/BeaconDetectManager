@@ -10,33 +10,33 @@ import Foundation
 import CoreLocation
 
 extension BeaconDetectManager {
-	
-	/// Beacon major and minor values.
-	public struct MajorMinor {
-		
-		/// The beacon major value.
-		public var major: CLBeaconMajorValue
-		
-		/// The beacon minor value.
-		public var minor: CLBeaconMinorValue?
-		
-		
-		/// init
-		///
-		/// - Parameter major: a Value of beacon's major.
-		public init(major: CLBeaconMajorValue) {
-			self.major = major
-		}
-		
-		/// init
-		///
-		/// - Parameter major: a Value of beacon's major.
-		/// - Parameter minor: a Value of beacon's minor.
-		public init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
-			self.major = major
-			self.minor = minor
-		}
-		
-	}
-	
+  
+  /// Beacon major and minor values.
+  public struct MajorMinor {
+    
+    /// The beacon major value.
+    public var major: CLBeaconMajorValue
+    
+    /// The beacon minor value.
+    public var minor: CLBeaconMinorValue?
+    
+    
+    /// init
+    ///
+    /// - Parameter major: a Value of beacon's major.
+    public init(major: CLBeaconMajorValue) {
+      self.major = major
+    }
+    
+    /// init
+    ///
+    /// - Parameter major: a Value of beacon's major.
+    /// - Parameter minor: a Value of beacon's minor.
+    public init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
+      self.major = major
+      self.minor = minor
+    }
+    
+  }
+  
 }
