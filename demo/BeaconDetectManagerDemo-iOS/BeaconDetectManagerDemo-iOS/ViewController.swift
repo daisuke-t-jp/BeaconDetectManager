@@ -11,7 +11,7 @@ import CoreLocation
 import BeaconDetectManager
 
 class ViewController: UIViewController, BeaconDetectManagerDelegate {
-
+  
   // MARK: - Outlet
   @IBOutlet weak var labelStatus: UILabel!
   @IBOutlet weak var textfieldProximityUUID: UITextField!
@@ -35,46 +35,46 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate {
   // MARK: BeaconDetectManager Delegate
   func beaconDetectManagerDidDisableLocationService(_ manager: BeaconDetectManager) {
     textviewLog.text = String(format: "%@\n%@",
-                  textviewLog.text ?? "",
-                  "didDisableLocationService")
+                              textviewLog.text ?? "",
+                              "didDisableLocationService")
     
     alertPresentWithOpenSetting("Please enable Location service")
   }
   
   func beaconDetectManagerDidDisableBluetoothService(_ manager: BeaconDetectManager) {
     textviewLog.text = String(format: "%@\n%@",
-                  textviewLog.text ?? "",
-                  "didDisableBluetoothService")
-
+                              textviewLog.text ?? "",
+                              "didDisableBluetoothService")
+    
     alertPresentWithOpenSetting("Please enable Bluetooth service")
   }
   
   // Delegate called when user entered the specified region.
   func beaconDetectManager(_ manager: BeaconDetectManager, didEnterRegion region: CLRegion) {
     textviewLog.text = String(format: "%@\n%@",
-                  textviewLog.text ?? "",
-                  "didEnterRegion")
+                              textviewLog.text ?? "",
+                              "didEnterRegion")
   }
-
+  
   // Delegate called when user exited the specified region.
   func beaconDetectManager(_ manager: BeaconDetectManager, didExitRegion region: CLRegion) {
     textviewLog.text = String(format: "%@\n%@",
-                  textviewLog.text ?? "",
-                  "didExitRegion")
+                              textviewLog.text ?? "",
+                              "didExitRegion")
   }
   
   // Delegate called when one or more beacons are in range.
   func beaconDetectManager(_ manager: BeaconDetectManager, didRangeBeacons beacons: [CLBeacon]) {
     textviewLog.text = String(format: "%@\n%@",
-                  textviewLog.text ?? "",
-                  "didRangeBeacons ->")
+                              textviewLog.text ?? "",
+                              "didRangeBeacons ->")
     for beacon in beacons {
       textviewLog.text = String(format: "%@\nproximity uuid[%@] major[%@] minor[%@] rssi[%@]",
-                    textviewLog.text ?? "",
-                    beacon.proximityUUID.uuidString,
-                    beacon.major,
-                    beacon.minor,
-                    beacon.rssi)
+                                textviewLog.text ?? "",
+                                beacon.proximityUUID.uuidString,
+                                beacon.major,
+                                beacon.minor,
+                                beacon.rssi)
     }
   }
   
@@ -83,22 +83,22 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate {
   // MARK: - Alert
   func alertPresentWithOpenSetting(_ message: String) {
     let alert: UIAlertController = UIAlertController(title: "Demo",
-                             message: message,
-                             preferredStyle: .alert)
+                                                     message: message,
+                                                     preferredStyle: .alert)
     
     let defaultAction: UIAlertAction = UIAlertAction(title: "OK",
-                             style: .default,
-                             handler:
+                                                     style: .default,
+                                                     handler:
       {
         (action: UIAlertAction!) -> Void in
         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!,
-                      options: [:],
-                      completionHandler: nil)
+                                  options: [:],
+                                  completionHandler: nil)
     })
     
     let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel",
-                            style: .cancel,
-                            handler:
+                                                    style: .cancel,
+                                                    handler:
       {
         (action: UIAlertAction!) -> Void in
     })
@@ -115,13 +115,13 @@ class ViewController: UIViewController, BeaconDetectManagerDelegate {
   func buttonInit() {
     buttonStart.setTitle("Start", for: .normal)
     buttonStart.addTarget(self,
-                action: #selector(self.buttonStartAction(sender:)),
-                for: .touchUpInside)
-
+                          action: #selector(self.buttonStartAction(sender:)),
+                          for: .touchUpInside)
+    
     buttonClear.setTitle("Clear", for: .normal)
     buttonClear.addTarget(self,
-                action: #selector(self.buttonClearAction(sender:)),
-                for: .touchUpInside)
+                          action: #selector(self.buttonClearAction(sender:)),
+                          for: .touchUpInside)
   }
   
   @objc func buttonStartAction(sender: UIButton) {

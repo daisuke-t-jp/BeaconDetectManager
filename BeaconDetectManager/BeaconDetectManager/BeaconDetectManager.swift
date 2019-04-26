@@ -19,7 +19,7 @@ public class BeaconDetectManager: NSObject, CLLocationManagerDelegate, CBCentral
   public enum State {
     /// No processing
     case none
-
+    
     /// Requesting authorization of location service
     case requestAuthorizationLocationService
     
@@ -105,8 +105,8 @@ extension BeaconDetectManager {
     // Check Bluetooth switch status.
     state = State.requestAuthorizationBluetoothService
     centralManager = CBCentralManager(delegate: self,
-                      queue: nil,
-                      options: [CBCentralManagerOptionShowPowerAlertKey: false])
+                                      queue: nil,
+                                      options: [CBCentralManagerOptionShowPowerAlertKey: false])
   }
   
   private func startRanging() {
@@ -142,7 +142,7 @@ extension BeaconDetectManager {
     beaconRegion.notifyEntryStateOnDisplay = false
     beaconRegion.notifyOnEntry = false
     beaconRegion.notifyOnExit = false
-
+    
     if eventOption.contains(.didEnterRegion) {
       beaconRegion.notifyOnEntry = true
     }
@@ -155,7 +155,7 @@ extension BeaconDetectManager {
     locationManager.requestWhenInUseAuthorization()
     locationManager.allowsBackgroundLocationUpdates = false
     locationManager.pausesLocationUpdatesAutomatically = false
-  
+    
     locationManager.startUpdatingLocation()
     locationManager.startUpdatingHeading()
     locationManager.startRangingBeacons(in: beaconRegion)
@@ -170,7 +170,7 @@ extension BeaconDetectManager {
     if let beaconRegion = beaconRegion {
       locationManager.stopRangingBeacons(in: beaconRegion)
     }
-
+    
     beaconRegion = nil
     locationManager.delegate = nil
   }
@@ -188,7 +188,7 @@ extension BeaconDetectManager {
     if status == .authorizedWhenInUse {
       return true
     }
-
+    
     if status == .authorizedAlways {
       return true
     }
